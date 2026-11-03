@@ -64,8 +64,8 @@ export const profile: Profile = {
 };
 
 export const stats: Stat[] = [
-  { value: 7, suffix: "", label: "projetos autorais & acadêmicos" },
-  { value: 15, suffix: "+", label: "tecnologias & frameworks" },
+  { value: 8, suffix: "", label: "projetos autorais & acadêmicos" },
+  { value: 16, suffix: "+", label: "tecnologias & frameworks" },
   { value: 4, suffix: "", label: "áreas de especialização" }
 ];
 
@@ -76,7 +76,7 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "Front-end & Mobile",
-    items: "React 19/18, Next.js, TypeScript, JavaScript, Tailwind CSS, Kotlin 2.0, Jetpack Compose, Material 3, Vite, UI/UX Design."
+    items: "React 19/18, Next.js 15, TypeScript, JavaScript, Tailwind CSS, Kotlin 2.0, Jetpack Compose, Material 3, Vite, UI/UX Design."
   },
   {
     title: "Desktop & Automação",
@@ -90,8 +90,30 @@ export const skills: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    slug: "esg-spring-api",
+    slug: "ecofleet-telemetria-esg",
     index: "01",
+    title: "EcoFleet: Telemetria & Carbono ESG",
+    client: "Plataforma SaaS Corporativa",
+    category: "SaaS Full Stack · Auditoria de Frotas & Carbono",
+    year: "2026",
+    role: "Full Stack · Spring Boot 3 · Next.js 15",
+    summary: "Plataforma corporativa full stack para telemetria de frotas pesadas, detecção de desvios e fraudes de diesel em tempo real e cálculo de emissões de Escopo 3 pelo GHG Protocol Brasil.",
+    overview: "Aplicação corporativa ponta a ponta desenvolvida para resolver uma dor crítica de transportadoras e operadores logísticos: o desvio de combustível e a exigência de governança de carbono por grandes embarcadores. O sistema audita fisicamente cada abastecimento cruzando litragem com a capacidade volumétrica do tanque (Toco 300L, Truck 600L, Carreta 1050L), calcula o rendimento real (km/l), gera alertas automáticos quando o consumo cai abaixo de 70% da meta operacional e converte o volume consumido em emissões de CO₂e oficiais do GHG Protocol Brasil (2,671 kg CO₂e/L).",
+    stack: ["Java 21", "Spring Boot 3", "Next.js 15", "React 19", "PostgreSQL", "Flyway", "Spring Security", "JWT", "TypeScript", "Tailwind CSS", "Recharts", "Docker"],
+    highlights: [
+      "Back-end em Spring Boot 3 com Spring Security 6, JWT stateless e tratamento global de erros RFC 7807 (ProblemDetail).",
+      "Motor de auditoria física com validação de capacidade volumétrica de tanque e detecção automática de anomalias operacionais.",
+      "Cálculo oficial de pegada de carbono móvel alinhado aos fatores de emissão do Programa Brasileiro GHG Protocol (2,671 kg CO₂e/L).",
+      "Front-end em Next.js 15 (App Router) com paginação no servidor, ordenação dinâmica, exportação de relatórios em CSV e gráficos analíticos interativos via Recharts.",
+      "Suporte a Live Demo com telemetria simulada resiliente e containerização completa via Docker Compose."
+    ],
+    challenge: "Garantir a integridade física dos registros de abastecimento, tratando desde inconsistências cadastrais de motoristas e frotas até o cálculo fidedigno de emissões e taxas de desvio em tempo real.",
+    outcome: "Plataforma full stack de alto impacto operacional, com suíte de testes unitários no JUnit 5 (100% de cobertura das regras críticas), arquitetura limpa em camadas e interface fluida e responsiva.",
+    githubUrl: "https://github.com/Renan-Xavier/ecofleet-telemetria-esg"
+  },
+  {
+    slug: "esg-spring-api",
+    index: "02",
     title: "ESG Spring API",
     client: "FIAP ESG Track",
     category: "Controle de Cadeia de Suprimentos & Carbono",
@@ -113,7 +135,7 @@ export const projects: Project[] = [
   },
   {
     slug: "drawer-windows-organizer",
-    index: "02",
+    index: "03",
     title: "Drawer: Windows Desktop",
     client: "Projeto Autoral",
     category: "Organizador de Atalhos Estilo Discord",
@@ -134,7 +156,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bestsign-android",
-    index: "03",
+    index: "04",
     title: "BestSign: Assinador PDF",
     client: "Mobile Security",
     category: "Assinatura Eletrônica & Biometria Nativa",
@@ -157,7 +179,7 @@ export const projects: Project[] = [
   },
   {
     slug: "trivus-bank",
-    index: "04",
+    index: "05",
     title: "Trivus Bank",
     client: "Fintech Educativa FIAP",
     category: "Plataforma Bancária Acessível & Inclusiva",
@@ -178,7 +200,7 @@ export const projects: Project[] = [
   },
   {
     slug: "careinho-jornada-do-cuidado",
-    index: "05",
+    index: "06",
     title: "CAREinho: Jornada do Cuidado",
     client: "Challenge FIAP",
     category: "Saúde Digital & Redução de No-Show",
@@ -199,7 +221,7 @@ export const projects: Project[] = [
   },
   {
     slug: "automacao-esg-plsql",
-    index: "06",
+    index: "07",
     title: "Automação ESG & IoT",
     client: "Eficiência Energética Corporativa",
     category: "Triggers & Banco de Dados Oracle",
@@ -220,7 +242,7 @@ export const projects: Project[] = [
   },
   {
     slug: "skillhub-fiap",
-    index: "07",
+    index: "08",
     title: "SkillHub: Global Solution",
     client: "Global Solution FIAP",
     category: "Capacitação & Mapeamento de Talentos",

@@ -8,5 +8,6 @@ out
 .vercel
 .env*
 scratch/
+projetos pessoais para portfolio/
 *.zip
 *.docx
