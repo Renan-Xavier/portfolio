@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-paper: #050505;
+  --text-ink: #f4f4f5;
+  --color-crimson: #dc2626;
+}
+
+html {
+  background-color: #050505;
+  color: #f4f4f5;
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+body {
+  background-color: #050505;
+  color: #f4f4f5;
+  overflow-x: clip;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Seleção de Texto em Vermelho Carmesim */
+::selection {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+/* Barra de rolagem estilizada */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 1px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Background com Dot Grid Sutil */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(220, 38, 38, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Aurora / Glow de fundo */
+.bg-crimson-aurora {
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.15) 0%, transparent 60%);
+}
+
+/* Efeito Neon Samurai Sign */
+@keyframes neon-flicker {
+  0%, 18%, 21%, 23%, 25%, 54%, 57%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 14px #ff0038) drop-shadow(0 0 32px #dc2626) drop-shadow(0 0 70px #990000);
+  }
+  19%, 24%, 55% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 2px #ff0038) drop-shadow(0 0 8px #990000);
+  }
+}
+
+@keyframes neon-pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 16px #ff0038) drop-shadow(0 0 38px #dc2626) drop-shadow(0 0 80px #7f1d1d);
+  }
+  50% {
+    filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 10px #ff0038) drop-shadow(0 0 24px #dc2626) drop-shadow(0 0 55px #7f1d1d);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse-glow 3.5s ease-in-out infinite;
+}
+
+.animate-neon-flicker {
+  animation: neon-flicker 4s infinite alternate;
+}
