@@ -9,5 +9,6 @@ out
 .env*
 scratch/
 projetos pessoais para portfolio/
+projeto-de-automacao/
 *.zip
 *.docx
