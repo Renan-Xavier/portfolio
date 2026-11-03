@@ -14,6 +14,7 @@ export interface Project {
   outcome: string;
   githubUrl?: string;
   videoUrl?: string;
+  images?: { title: string; url: string; caption: string }[];
 }
 
 export interface Profile {
@@ -109,7 +110,34 @@ export const projects: Project[] = [
     ],
     challenge: "Garantir a integridade física dos registros de abastecimento, tratando desde inconsistências cadastrais de motoristas e frotas até o cálculo fidedigno de emissões e taxas de desvio em tempo real.",
     outcome: "Plataforma full stack de alto impacto operacional, com suíte de testes unitários no JUnit 5 (100% de cobertura das regras críticas), arquitetura limpa em camadas e interface fluida e responsiva.",
-    githubUrl: "https://github.com/Renan-Xavier/ecofleet-telemetria-esg"
+    githubUrl: "https://github.com/Renan-Xavier/ecofleet-telemetria-esg",
+    images: [
+      {
+        title: "Dashboard de Telemetria & Carbono ESG",
+        url: "/images/projects/ecofleet/01-dashboard-telemetria.png",
+        caption: "Visão consolidada com KPIs em tempo real, consumo de diesel, pegada de carbono e gráficos Recharts."
+      },
+      {
+        title: "Tabela de Auditoria & Classificação de Desvios",
+        url: "/images/projects/ecofleet/02-auditoria-abastecimentos.png",
+        caption: "Detecção visual de anomalias (NORMAL, ATENÇÃO, CRÍTICO), busca por placa, filtros e exportação CSV."
+      },
+      {
+        title: "Modal de Lançamento com Validação Física de Tanque",
+        url: "/images/projects/ecofleet/03-modal-novo-abastecimento.png",
+        caption: "Prévia em tempo real de km/l e alerta automático caso a litragem ultrapasse a capacidade volumétrica do veículo."
+      },
+      {
+        title: "Gestão da Frota & Metas Operacionais",
+        url: "/images/projects/ecofleet/04-gestao-frota-metas.png",
+        caption: "Cadastro técnico de veículos por tipo (Toco, Truck, Carreta), tanque máximo e metas de consumo."
+      },
+      {
+        title: "Validação Automatizada com JUnit 5 no Maven",
+        url: "/images/projects/ecofleet/05-validacao-testes-junit.png",
+        caption: "11/11 testes unitários aprovados com 100% de sucesso validando as regras de auditoria e cálculo GHG Protocol."
+      }
+    ]
   },
   {
     slug: "esg-spring-api",

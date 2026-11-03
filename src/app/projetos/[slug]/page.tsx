@@ -126,6 +126,45 @@ export default async function ProjectPage({
           </div>
         )}
 
+        {/* Galeria de Validação & Capturas do Sistema */}
+        {project.images && project.images.length > 0 && (
+          <div className="border-t border-paper-border pt-14">
+            <span className="font-mono text-crimson text-xs uppercase tracking-[0.25em] block mb-6 font-semibold">
+              ( Validação Visual & Telas do Sistema )
+            </span>
+            <div className="grid gap-10">
+              {project.images.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl border border-paper-border/80 bg-paper-card shadow-2xl transition-all hover:border-crimson/50"
+                >
+                  <div className="p-4 sm:p-5 border-b border-paper-border/60 bg-[#0a0a0f] flex items-center justify-between">
+                    <div>
+                      <h4 className="font-sans text-base sm:text-lg font-bold text-ink">
+                        {img.title}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-ink-soft mt-0.5">
+                        {img.caption}
+                      </p>
+                    </div>
+                    <span className="font-mono text-xs text-crimson font-medium px-2.5 py-1 rounded-md bg-crimson/10 border border-crimson/20">
+                      0{idx + 1}
+                    </span>
+                  </div>
+                  <div className="relative bg-black/40 overflow-hidden">
+                    <img
+                      src={img.url}
+                      alt={img.title}
+                      className="w-full h-auto object-cover rounded-b-2xl border-t border-paper-border/30"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Destaques Técnicos */}
         <div className="border-t border-paper-border pt-14">
           <span className="font-mono text-crimson text-xs uppercase tracking-[0.25em] block mb-8 font-semibold">
