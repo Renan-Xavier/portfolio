@@ -52,10 +52,15 @@ export default async function ProjectPage({
         <div className="pointer-events-none absolute inset-0 bg-crimson-aurora opacity-60" />
 
         <div className="relative z-10 mx-auto max-w-5xl">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="font-mono text-xs font-semibold text-crimson uppercase tracking-[0.25em]">
               {project.index} · {project.category}
             </span>
+            {project.academicBadge && (
+              <span className="inline-flex items-center rounded-full border border-crimson/50 bg-crimson/15 px-3.5 py-1 font-mono text-xs font-semibold uppercase tracking-wider text-crimson-glow shadow-[0_0_15px_rgba(220,38,38,0.25)]">
+                🎓 {project.academicBadge}
+              </span>
+            )}
           </div>
 
           <h1 className="font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-ink mb-6">
@@ -67,6 +72,17 @@ export default async function ProjectPage({
             <span className="border-r border-paper-border pr-6">{project.year}</span>
             {project.client && (
               <span className="border-r border-paper-border pr-6">Instituição · {project.client}</span>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-target inline-flex items-center gap-1.5 rounded-full border border-crimson/50 bg-crimson/20 px-3.5 py-1 text-white font-semibold hover:bg-crimson/30 transition-colors"
+              >
+                Protótipo Navegável (Vercel)
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             )}
             {project.githubUrl && (
               <a

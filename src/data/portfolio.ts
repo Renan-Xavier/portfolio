@@ -13,6 +13,8 @@ export interface Project {
   challenge: string;
   outcome: string;
   githubUrl?: string;
+  liveUrl?: string;
+  academicBadge?: string;
   videoUrl?: string;
   images?: { title: string; url: string; caption: string }[];
 }
@@ -65,7 +67,7 @@ export const profile: Profile = {
 };
 
 export const stats: Stat[] = [
-  { value: 8, suffix: "", label: "projetos autorais & acadêmicos" },
+  { value: 9, suffix: "", label: "projetos autorais & acadêmicos" },
   { value: 16, suffix: "+", label: "tecnologias & frameworks" },
   { value: 4, suffix: "", label: "áreas de especialização" }
 ];
@@ -140,8 +142,45 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "esg-spring-api",
+    slug: "radarbairro-citizentech",
     index: "02",
+    title: "RadarBairro: CitizenTech",
+    client: "Global Solution FIAP (2TDS)",
+    academicBadge: "Projeto Acadêmico · Global Solution FIAP",
+    category: "CitizenTech Mobile · Mapa de Calor Urbano & IA",
+    year: "2026",
+    role: "Mobile & Arquitetura · Spring Boot · Gemini AI",
+    summary: "Mapa colaborativo de qualidade de vida e infraestrutura por bairro com validação entre vizinhos e resumo automático gerado por IA.",
+    overview: "Projeto acadêmico desenvolvido para a Global Solution FIAP (Desafio CitizenTech) com foco 100% na transparência urbana e sem anúncios imobiliários. A solução une quem busca um novo lugar para morar e quem já reside no bairro: exibe um mapa de calor colorido (verde, amarelo e vermelho) por categoria (Água, Energia, Alagamento, Segurança e Calçadas), permite relatar problemas da rua em segundos, valida ocorrências com o botão Apoiar dos vizinhos e utiliza a API do Google Gemini para sintetizar centenas de reclamações em um Raio-X direto do bairro.",
+    stack: ["React Native / Expo", "Java 21", "Spring Boot 3", "PostgreSQL + PostGIS", "Google Gemini API", "Google Maps API", "INMET API", "JavaScript", "HTML5 / CSS3"],
+    highlights: [
+      "Engenharia de UX/UI combinando 4 referências de mercado: filtros em pílulas e Bottom Sheet (QuintoAndar), alerta rápido com ícones grandes (Waze), mural comunitário com botão Apoiar (Colab) e Raio-X com barras 0–5 e resumo por IA (Airbnb).",
+      "Mapa de calor interativo por polígonos de bairro nos estados de SP, RJ e MG com recálculo instantâneo de cor ao alternar camadas de infraestrutura.",
+      "Validação social anti-fake news: relatos de falta d'água, apagões e alagamentos ganham peso estatístico conforme vizinhos da mesma rua clicam em Apoiar.",
+      "Arquitetura integrada com Java Spring Boot, banco geoespacial PostgreSQL + PostGIS, alertas meteorológicos do INMET e síntese textual via Google Gemini API.",
+      "Alinhamento direto com a Agenda 2030 da ONU: ODS 11 (Cidades Sustentáveis), ODS 10 (Redução das Desigualdades) e ODS 09 (Infraestrutura Resiliente)."
+    ],
+    challenge: "Dar visibilidade real aos problemas crônicos de infraestrutura de cada rua sem depender de portais imobiliários, evitando relatos falsos e transformando queixas isoladas em dados estruturados.",
+    outcome: "Protótipo mobile navegável publicado na Vercel, arquitetura completa documentada e apresentação executiva com Vídeo Pitch validada para a Global Solution FIAP.",
+    githubUrl: "https://github.com/Renan-Xavier/RadarBairro",
+    liveUrl: "https://radarbairro-beta.vercel.app",
+    videoUrl: "https://www.youtube.com/watch?v=PsAmejXaunc",
+    images: [
+      {
+        title: "Mapa de Calor Colaborativo & Filtros Rápidos por Camada",
+        url: "/images/projects/radarbairro/01-mapa-calor-filtros.png",
+        caption: "Visão geral com Bottom Sheet (Vila Mariana 4.6), filtro crítico de Energia (Santo Amaro 2.2) e filtro de Água (Itaquera 2.1)."
+      },
+      {
+        title: "Raio-X com Resumo por IA, Alerta Rápido Waze & Mural Colab",
+        url: "/images/projects/radarbairro/02-raiox-ia-comunidade.png",
+        caption: "Síntese gerada por IA com barras de 0 a 5, modal escuro de relato em segundos e mural comunitário com botão Apoiar."
+      }
+    ]
+  },
+  {
+    slug: "esg-spring-api",
+    index: "03",
     title: "ESG Spring API",
     client: "FIAP ESG Track",
     category: "Controle de Cadeia de Suprimentos & Carbono",
@@ -163,7 +202,7 @@ export const projects: Project[] = [
   },
   {
     slug: "drawer-windows-organizer",
-    index: "03",
+    index: "04",
     title: "Drawer: Windows Desktop",
     client: "Projeto Autoral",
     category: "Organizador de Atalhos Estilo Discord",
@@ -184,7 +223,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bestsign-android",
-    index: "04",
+    index: "05",
     title: "BestSign: Assinador PDF",
     client: "Mobile Security",
     category: "Assinatura Eletrônica & Biometria Nativa",
@@ -207,7 +246,7 @@ export const projects: Project[] = [
   },
   {
     slug: "trivus-bank",
-    index: "05",
+    index: "06",
     title: "Trivus Bank",
     client: "Fintech Educativa FIAP",
     category: "Plataforma Bancária Acessível & Inclusiva",
@@ -228,7 +267,7 @@ export const projects: Project[] = [
   },
   {
     slug: "careinho-jornada-do-cuidado",
-    index: "06",
+    index: "07",
     title: "CAREinho: Jornada do Cuidado",
     client: "Challenge FIAP",
     category: "Saúde Digital & Redução de No-Show",
@@ -249,7 +288,7 @@ export const projects: Project[] = [
   },
   {
     slug: "automacao-esg-plsql",
-    index: "07",
+    index: "08",
     title: "Automação ESG & IoT",
     client: "Eficiência Energética Corporativa",
     category: "Triggers & Banco de Dados Oracle",
@@ -270,7 +309,7 @@ export const projects: Project[] = [
   },
   {
     slug: "skillhub-fiap",
-    index: "08",
+    index: "09",
     title: "SkillHub: Global Solution",
     client: "Global Solution FIAP",
     category: "Capacitação & Mapeamento de Talentos",

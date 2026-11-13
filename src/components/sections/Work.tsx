@@ -52,9 +52,16 @@ export function Work() {
                       {project.index}
                     </span>
                     <div>
-                      <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-ink transition-transform duration-500 group-hover:translate-x-2.5 group-hover:text-crimson-glow">
-                        {project.title}
-                      </h3>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <h3 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-ink transition-transform duration-500 group-hover:translate-x-2.5 group-hover:text-crimson-glow">
+                          {project.title}
+                        </h3>
+                        {project.academicBadge && (
+                          <span className="inline-flex items-center rounded-full border border-crimson/40 bg-crimson/15 px-3 py-1 font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-crimson-glow shadow-[0_0_15px_rgba(220,38,38,0.2)]">
+                            🎓 {project.academicBadge}
+                          </span>
+                        )}
+                      </div>
                       <span className="text-ink-soft mt-1.5 block text-xs sm:hidden">
                         {project.category}
                       </span>
