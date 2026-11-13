@@ -67,7 +67,7 @@ export const profile: Profile = {
 };
 
 export const stats: Stat[] = [
-  { value: 9, suffix: "", label: "projetos autorais & acadêmicos" },
+  { value: 10, suffix: "", label: "projetos autorais & acadêmicos" },
   { value: 16, suffix: "+", label: "tecnologias & frameworks" },
   { value: 4, suffix: "", label: "áreas de especialização" }
 ];
@@ -179,8 +179,54 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "esg-spring-api",
+    slug: "smartsec-ai",
     index: "03",
+    title: "SmartSec AI: CFTV Preditivo & LGPD",
+    client: "Startup One FIAP (2TDS)",
+    academicBadge: "Projeto Acadêmico · Startup One FIAP",
+    category: "Edge AI B2B · Visão Computacional, Anti-Fadiga & LGPD",
+    year: "2026",
+    role: "Idealizador & Arquitetura IA · Edge Computing · UI Cyberpunk HUD",
+    summary: "Plataforma B2B SaaS de Visão Computacional em borda que filtra até 95% de alarmes falsos climáticos, previne quase-acidentes em galpões, calibra detecção pelo Sinesp/MJSP e anonimiza rostos nativamente (LGPD Art. 11).",
+    overview: "Startup B2B SaaS / AIaaS concebida e validada no projeto Startup One da FIAP a partir de dados oficiais (PNCP, Sinesp/MJSP, ABESE/IBM e ANPD) e pesquisa com 50 gestores de segurança corporativa. A solução acopla-se às câmeras já existentes em Shopping Centers, Condomínios Logísticos e Indústrias para substituir a observação humana passiva em escala 12×36 (que custa R$ 171.570,75/ano por posto 24h segundo o PNCP) por uma central inteligente estilo Cyberpunk HUD 4-Quad com filtragem de falsos positivos ambientais, predição de colisões (SafetyTech) e borrão facial nativo na borda (Privacy by Design).",
+    stack: ["Edge AI / Computer Vision", "JavaScript ES6+", "HTML5 / CSS3 Cyberpunk HUD", "RTSP / ONVIF Architecture", "Python", "Sinesp Data Calibration", "LGPD Privacy by Design"],
+    highlights: [
+      "Interface de comando CFTV 4-Quad em tela cheia com estética retro-futurista Cyberpunk HUD, menus flutuantes no topo e telemetria neural em tempo real.",
+      "Módulo Privacy by Design (Art. 11 da LGPD): aplica mosaico/borrão facial nativo na borda antes da gravação em disco, blindando empresas contra multas da ANPD de até 2% do faturamento (R$ 50 milhões).",
+      "Motor Anti-Fadiga validado contra Alert Fatigue (ABESE/IBM): descarta 94,2% dos disparos falsos causados por chuva, vento, faróis e animais em menos de 15ms.",
+      "Calibração criminal regionalizada por estado (SP, RJ, MG) segundo estatísticas do Sinesp/MJSP + Planta Tática Preditiva do galpão com antecipação de quase-acidentes em 3,2 segundos (SafetyTech).",
+      "Simulador comercial B2B de ROI integrado com base na planilha oficial do PNCP (R$ 171.570,75/ano por posto 24h em escala 12×36), demonstrando payback imediato."
+    ],
+    challenge: "Reduzir o custo proibitivo da folha 12×36 e eliminar a fadiga cognitiva dos operadores de CFTV sem exigir a troca do parque de câmeras já instalado no cliente e garantindo proteção integral aos dados biométricos.",
+    outcome: "Protótipo navegável de alta fidelidade hospedado na Vercel, validado com dados públicos oficiais (PNCP, Sinesp, ABESE e ANPD) e documentado no padrão executivo Startup One FIAP.",
+    githubUrl: "https://github.com/Renan-Xavier/SmartSec-AI",
+    liveUrl: "https://smartsec-ai.vercel.app",
+    images: [
+      {
+        title: "Central CFTV 4-Quad Fullscreen & Menus Flutuantes Cyberpunk HUD",
+        url: "/images/projects/smartsec-ai/01-cco-monitoramento-lgpd.png",
+        caption: "4 câmeras dividindo 100% da tela com retícula óptica, silhuetas com borrão facial nativo (LGPD Art. 11) e calibração Sinesp no menu flutuante."
+      },
+      {
+        title: "Motor Anti-Fadiga de Alarmes (Real vs. Falso Positivo Ambiental)",
+        url: "/images/projects/smartsec-ai/02-filtro-antifadiga-alarmes.png",
+        caption: "Triagem inteligente em borda que silencia 94,2% dos disparos falsos de chuva, vento e animais e destaca apenas ameaças reais."
+      },
+      {
+        title: "Planta Tática Preditiva do Galpão (SafetyTech & Rastreamento Multi-Câmera)",
+        url: "/images/projects/smartsec-ai/03-mapa-preditivo-safetytech.png",
+        caption: "Visão tática sobre a câmera do galpão logístico com vetor de deslocamento de suspeito e predição de colisão empilhadeira × pedestre (3,2s)."
+      },
+      {
+        title: "Simulador Comercial de ROI B2B (Escala 12×36 PNCP & Blindagem ANPD)",
+        url: "/images/projects/smartsec-ai/04-simulador-roi-12x36-pncp.png",
+        caption: "Calculadora interativa baseada no custo oficial do PNCP (R$ 171.570,75/ano por posto 24h) demonstrando economia líquida de R$ 611,9 mil/ano."
+      }
+    ]
+  },
+  {
+    slug: "esg-spring-api",
+    index: "04",
     title: "ESG Spring API",
     client: "FIAP ESG Track",
     category: "Controle de Cadeia de Suprimentos & Carbono",
@@ -202,7 +248,7 @@ export const projects: Project[] = [
   },
   {
     slug: "drawer-windows-organizer",
-    index: "04",
+    index: "05",
     title: "Drawer: Windows Desktop",
     client: "Projeto Autoral",
     category: "Organizador de Atalhos Estilo Discord",
@@ -223,7 +269,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bestsign-android",
-    index: "05",
+    index: "06",
     title: "BestSign: Assinador PDF",
     client: "Mobile Security",
     category: "Assinatura Eletrônica & Biometria Nativa",
@@ -246,7 +292,7 @@ export const projects: Project[] = [
   },
   {
     slug: "trivus-bank",
-    index: "06",
+    index: "07",
     title: "Trivus Bank",
     client: "Fintech Educativa FIAP",
     category: "Plataforma Bancária Acessível & Inclusiva",
@@ -267,7 +313,7 @@ export const projects: Project[] = [
   },
   {
     slug: "careinho-jornada-do-cuidado",
-    index: "07",
+    index: "08",
     title: "CAREinho: Jornada do Cuidado",
     client: "Challenge FIAP",
     category: "Saúde Digital & Redução de No-Show",
@@ -288,7 +334,7 @@ export const projects: Project[] = [
   },
   {
     slug: "automacao-esg-plsql",
-    index: "08",
+    index: "09",
     title: "Automação ESG & IoT",
     client: "Eficiência Energética Corporativa",
     category: "Triggers & Banco de Dados Oracle",
@@ -309,7 +355,7 @@ export const projects: Project[] = [
   },
   {
     slug: "skillhub-fiap",
-    index: "09",
+    index: "10",
     title: "SkillHub: Global Solution",
     client: "Global Solution FIAP",
     category: "Capacitação & Mapeamento de Talentos",
